@@ -38,10 +38,10 @@ int main(int argc, char *argv[]) {
     for ( i = 0; i < 3334; i++){
         insereInicioListDup(&minha_lista);
         contador ++;
-        //printf("O contador agora eh %d\n",contador);
+        printf("O contador agora eh %d\n",contador);
     }
     tempo = clock() -  tempo;
-    printf(" %d valores foram inseridos no inicio\n", i);
+    
 
 
     //------Inserir 3.333 Valores no fim ------//
@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
     for ( i = 0; i < 3333; i++){
         insereFimListDup(&minha_lista);
         contador ++;
-        //printf("O contador agora eh %d\n",contador);
+        printf("O contador agora eh %d\n",contador);
     }
     tempo = clock() -  tempo;
     printf(" %d valores foram inseridos no fim \n", i);
@@ -62,13 +62,22 @@ int main(int argc, char *argv[]) {
 
     for ( i = 0; i < 3333; i++){
         inserePosListDup(&minha_lista, GeraPosAleatoria(minha_lista, contador));
-        //printf("O contador agora eh %d\n",contador);
+        contador ++;
+        printf("O contador agora eh %d\n",contador);
     }
     tempo = clock() -  tempo;
-    printf(" %d valores foram inseridos na posicao\n", i);
     
     
     
+    
+    printf(" %d valores foram inseridos no inicio\n\n", i);
+
+    printf(" %d valores foram inseridos no fim \n\n", i);
+
+
+    printf(" %d valores foram inseridos na posicao\n\n", i);
+
+
     //imprimi qtd de valores e tempo de duração da inserção
     printf("A lista tem %d valores e seu processamento durou %lf milisegundos!\n\n", contador, (((double)tempo)/(CLOCKS_PER_SEC/1000)));
 

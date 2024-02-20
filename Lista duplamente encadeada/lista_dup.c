@@ -63,7 +63,7 @@ void inserePosListDup(tipo_noh_dup **lista, int pos){
             aux = aux-> prox;
             contador++;
         }
-        if (aux = NULL){ // Verifica se a posição é válida
+        if (aux != NULL){ // Verifica se a posição é válida
             novo_no->prox = aux; // Define o próximo nó do novo nó como o nó atual da posição
             novo_no->ant = aux->ant; // Define o nó anterior do novo nó como o nó anterior do nó atual da posição
             if (aux->ant != NULL){ // Verifica se o nó atual não é o primeiro nó da lista
